@@ -12,7 +12,7 @@ public class OpenAiImageModelExamples {
     @GetMapping("/img")
     public String getJoke(@RequestParam String message){
         ChatLanguageModel model = OpenAiChatModel.builder()
-                .apiKey("input your api key")
+                .apiKey("input your open AI api key")
                 .modelName(GPT_4_O_MINI)
                 .build();
         return model.generate(message);
